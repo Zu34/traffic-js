@@ -1,0 +1,83 @@
+
+.traffic-light-container {
+    width: 120px;
+    height: 360px;
+    margin: 50px auto;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .traffic-light-container::after {
+    content: '';
+    width: 20px;
+    height: 80px; /* Adjust height as needed */
+    background-color: #706d6d;
+    position:absolute;
+    bottom: -90px; /* Position the stick relative to the container */
+    left: calc(50% - 10px); /* Center the stick */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+  /* Individual Lights */
+  .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: background-color 0.3s ease;
+  }
+
+  .light.active {
+    background-color: inherit;
+  }
+
+  /* Active Light Colors */
+  #red.active {
+    background-color: red;
+    box-shadow: 0 0 20px red;
+  }
+  #yellow.active {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+  }
+  #green.active {
+    background-color: green;
+    box-shadow: 0 0 20px green;
+  }
+
+  /* Styled Button */
+  .change-light-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0e3c9f8c;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    bottom: -70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .change-light-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .change-light-button:active {
+    transform: scale(0.95);
+  } 
